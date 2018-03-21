@@ -53,7 +53,7 @@ class App extends Component {
 
         <button onClick={() => this.getCSS()}>Get custom CSS</button>
 
-        {this.state.css && <pre>{this.state.css}</pre>}
+        {this.state.css && <pre>@import url('{this.state.css}')</pre>}
       </div>
     );
   }
