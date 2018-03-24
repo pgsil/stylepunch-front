@@ -1,5 +1,5 @@
 export const getStyleList = async () => {
-  let response = await fetch("https://stylepunch-api.herokuapp.com/list");
+  let response = await fetch("https://35.229.92.76:3000/list");
 
   let data = await response.json();
 
@@ -7,7 +7,7 @@ export const getStyleList = async () => {
 };
 
 export const getCustomCSS = async stylesString => {
-  let response = await fetch(`https://stylepunch-api.herokuapp.com/styles/${stylesString}`);
+  let response = await fetch(`https://35.229.92.76:3000/list/${stylesString}`);
 
   let data = await response;
 
