@@ -1,7 +1,7 @@
 import React from "react";
 
 const Item = ({ author, image, title, url, isEnabled, addToList }) => (
-  <article>
+  <article className="theme-item">
     <h3>{title}</h3>
 
     <img src={image} alt={`Screenshot of ${title}`} />

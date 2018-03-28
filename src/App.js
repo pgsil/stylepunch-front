@@ -42,19 +42,21 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        {Object.entries(this.state.styleList).map(el => (
-          <Item
-            {...el[1]}
-            addToList={() => this.addToList(el[0])}
-            isEnabled={this.state.checked.includes(el[0])}
-          />
-        ))}
+      <main>
+        <div className="App">
+          {Object.entries(this.state.styleList).map(el => (
+            <Item
+              {...el[1]}
+              addToList={() => this.addToList(el[0])}
+              isEnabled={this.state.checked.includes(el[0])}
+            />
+          ))}
+        </div>
 
         <button onClick={() => this.getCSS()}>Get custom CSS</button>
 
         {this.state.css && <pre>@import url('{this.state.css}')</pre>}
-      </div>
+      </main>
     );
   }
 }
