@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 
 import Item from "./components/Item";
+import RocketIcon from "./components/RocketIcon";
 
 import { getStyleList, getCustomCSS } from "./api";
 
@@ -53,7 +54,10 @@ class App extends Component {
           ))}
         </div>
 
-        <button onClick={() => this.getCSS()}>Get custom CSS</button>
+        <button className="btn-get-css" onClick={() => this.getCSS()}>
+          <RocketIcon />
+          Get custom CSS
+        </button>
 
         {this.state.css && <pre>@import url('{this.state.css}')</pre>}
       </main>
