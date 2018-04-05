@@ -1,5 +1,5 @@
 export const getStyleList = async () => {
-  let response = await fetch("https://stylepunch.club/list");
+  let response = await fetch("https://api.stylepunch.club/list");
 
   let data = await response.json();
 
@@ -7,7 +7,7 @@ export const getStyleList = async () => {
 };
 
 export const getCustomCSS = async stylesString => {
-  let response = await fetch(`https://stylepunch.club/list/${stylesString}`);
+  let response = await fetch(`https://api.stylepunch.club/list/${stylesString}`);
 
   let data = await response;
 
