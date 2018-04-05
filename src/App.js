@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 
 import Item from "./components/Item";
+import Modal from "./components/Modal";
 import RocketIcon from "./components/RocketIcon";
 
 import { getStyleList, getCustomCSS } from "./api";
@@ -59,7 +60,12 @@ class App extends Component {
           Get custom CSS
         </button>
 
-        {this.state.css && <pre>@import url('{this.state.css}')</pre>}
+        {this.state.css && (
+          <Modal
+            closeFn={() => this.setState({ css: null })}
+            string={`@import url('${this.state.css}')`}
+          />
+        )}
       </main>
     );
   }

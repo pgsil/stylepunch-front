@@ -10,7 +10,7 @@ const Item = ({ author, image, title, url, isEnabled, addToList }) => (
     <a href={url}>Thread link</a>
 
     <button onClick={() => addToList()} className={isEnabled ? "btn btn-enabled" : "btn"}>
-      {isEnabled ? "Added" : "Add"}
+      {isEnabled ? "Added 👌" : "Add"}
     </button>
   </article>
 );
