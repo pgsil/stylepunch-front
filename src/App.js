@@ -63,7 +63,7 @@ class App extends Component {
         {this.state.css && (
           <Modal
             closeFn={() => this.setState({ css: null })}
-            string={`@import url('${this.state.css}')`}
+            string={`@import url('${this.state.css}');`}
           />
         )}
       </main>
