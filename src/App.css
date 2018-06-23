@@ -17,7 +17,8 @@ body {
 
 .theme-item {
   width: 300px;
-  height: 520px;
+  min-height: 520px;
+  max-height: 520px;
   text-align: center;
   padding: 20px;
   margin: 20px;
@@ -26,10 +27,32 @@ body {
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
+  transition: max-height 0.5s ease-in-out;
 }
+.theme-item:hover {
+  max-height: 900px;
+}
+
+.theme-item .description {
+  background: #1b1a20;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 30px;
+  padding: 3px 5px 1px;
+  box-shadow: inset 1px 0px #f3b93d;
+}
+.theme-item:hover .description {
+  height: initial;
+  white-space: initial;
+  overflow: initial;
+  text-overflow: initial;
+}
+
 .theme-item img {
   max-width: 100%;
   margin: 10px auto;
+  max-height: 230px;
 }
 .theme-item h3 {
   font-size: 18px;
